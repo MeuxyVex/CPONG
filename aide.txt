@@ -1,0 +1,35 @@
+Input Handling:
+- Canonical Mode - line based
+- Non-Canonical Input Mode - More control over input
+- RAW Input Mode
+- Turn off Echo
+
+
+Outils
+- man 3 termios
+- ANSII Escape Codes 
+
+ANSI Escape Codes:
+FG Color
+Paremeters: R G B
+printf "\x1B[:38;2;R;G;Bm"
+
+Couleur fond
+Paremeters: R G B
+printf "\x1B[48;2;R;G;Bm"
+
+Bouger le curseur  (x, y) - (en haut) (1, 1)
+Paremeters: X Y
+printf "\x1B[Y;XH"
+
+Clear l'écran
+printf "\x1B[2J"
+
+Cacher curseur
+printf "\x1B[?25l"
+
+Montrer curseur
+printf "\x1B[?25h"
+
+Reset couleurs
+printf "\x1B[m"
