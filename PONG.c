@@ -51,8 +51,7 @@ int read_input() {
    	char buf[4096]; // maximum input buffer
 	int n = read(STDIN_FILENO, buf, sizeof(buf));
 	int final_key = 0;
-    // it's okay if we miss some keys
-    // we will correct it on next frame
+
 	for (int k = 0; k <= n - 3; k += 3) {
 		int key = read_key(buf, k);
 		if (key == 0) continue;
